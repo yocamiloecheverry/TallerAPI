@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f73f99c4-bafb-44ca-a1c3-b2d18d47957c",
+		"name": "Pruebas_API_Futbolistas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33500439"
+	},
+	"item": [
+		{
+			"name": "Obtener Futbolistas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/futbolistas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"futbolistas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Futbolista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"camiseta\": \"9\",\r\n    \"nombre\": \"Ronaldo\",\r\n    \"apellido\": \"Nazario\",\r\n    \"edad\": 45,\r\n    \"equipo\": \"Sin equipo\",\r\n    \"email\": \"ronaldo9@gmail.com\",\r\n    \"retirado\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/futbolistas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"futbolistas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener UN Futbolista",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/futbolistas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"futbolistas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Futbolista",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"camiseta\": \"7\",\r\n    \"nombre\": \"Cristiano\",\r\n    \"apellido\": \"Ronaldo\",\r\n    \"edad\": 39,\r\n    \"equipo\": \"Al Nassr\",\r\n    \"email\": \"cristiano7@gmail.com\",\r\n    \"retirado\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/futbolistas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"futbolistas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Futbolista",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/futbolistas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"futbolistas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

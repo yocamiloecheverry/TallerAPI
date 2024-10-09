@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "camiseta": "1",
+    "nombre": "Iker",
+    "apellido": "Casillas",
+    "edad": 40,
+    "equipo": "Sin equipo",
+    "email": "ikercasillas@gmail.com",
+    "retirado": true
+  },
+  {
+    "id": 2,
+    "camiseta": "7",
+    "nombre": "Cristiano",
+    "apellido": "Ronaldo",
+    "edad": 39,
+    "equipo": "Al Nassr",
+    "email": "cristiano7@gmail.com",
+    "retirado": false
+  },
+  {
+    "id": 3,
+    "camiseta": "10",
+    "nombre": "James",
+    "apellido": "Rodríguez",
+    "edad": 33,
+    "equipo": "Rayo Vallecano",
+    "email": "james10@gmail.com",
+    "retirado": false
+  },
+  {
+    "id": 4,
+    "camiseta": "9",
+    "nombre": "Ronaldo",
+    "apellido": "Nazario",
+    "edad": 45,
+    "equipo": "Sin equipo",
+    "email": "ronaldo9@gmail.com",
+    "retirado": true
+  }
+]
