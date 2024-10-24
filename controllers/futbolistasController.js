@@ -1,6 +1,20 @@
 const { readFile, writeFile } = require('../utils/fileOperation');
 const Joi = require('joi');
 
+
+// Middleware para añadir IP y fecha de creación/actualización
+const dayjs = require('dayjs');
+const addMetaData = (req, res, next) => {
+    req.body.ip = req.ip;
+    const now = dayjs().format('HH:mm DD-MM-YYYY');
+    if (req.method === 'POST') {
+        req.body.created_at = now;
+    } else if (req.method === 'PUT') {
+        req.body.updated_at = now;
+    }
+    next();
+};
+
 // Validar datos del futbolista
 const validateFutbolista = (futbolista) => {
     const schema = Joi.object({
@@ -17,7 +31,13 @@ const validateFutbolista = (futbolista) => {
 
 // Obtener todos los futbolistas
 const getFutbolistas = (req, res) => {
-    const futbolistas = readFile();
+    let futbolistas = readFile();
+    if (req.query.filterKey && req.query.filterValue) {
+        futbolistas = futbolistas.filter(f => f[req.query.filterKey] === req.query.filterValue);
+    }
+    if (req.query.limit) {
+        futbolistas = futbolistas.slice(0, Number(req.query.limit));
+    }
     res.json(futbolistas);
 };
 
@@ -66,6 +86,18 @@ const deleteFutbolista = (req, res) => {
 
     writeFile(updatedFutbolistas);
     res.status(204).json();
+};
+
+// Actualizar un campo en todos los registros
+const updateAllFutbolistasField = (req, res) => {
+    const futbolistas = readFile();
+    const updatedFutbolistas = futbolistas.map(f => ({
+        ...f,
+        [req.body.field]: req.body.value,
+        updated_at: dayjs().format('HH:mm DD-MM-YYYY')
+    }));
+    writeFile(updatedFutbolistas);
+    res.json(updatedFutbolistas);
 };
 
 module.exports = {

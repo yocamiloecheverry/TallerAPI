@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "camiseta": "7",
-    "nombre": "Cristiano",
-    "apellido": "Ronaldo",
-    "edad": 39,
-    "equipo": "Al Nassr",
-    "email": "cristiano7@gmail.com",
-    "retirado": false
+    "camiseta": "9",
+    "nombre": "Ronaldo",
+    "apellido": "Nazario",
+    "edad": 43,
+    "equipo": "Equipo Amateur",
+    "email": "ronaldo9@gmail.com",
+    "retirado": true
   },
   {
     "id": 3,
@@ -38,5 +38,25 @@
     "equipo": "Sin equipo",
     "email": "ronaldo9@gmail.com",
     "retirado": true
+  },
+  {
+    "id": 5,
+    "camiseta": "9",
+    "nombre": "Ronaldo",
+    "apellido": "Nazario",
+    "edad": 43,
+    "equipo": "Equipo Amateur",
+    "email": "ronaldo9@gmail.com",
+    "retirado": true
+  },
+  {
+    "id": 6,
+    "camiseta": "9",
+    "nombre": "Jhon",
+    "apellido": "Durán",
+    "edad": 21,
+    "equipo": "Aston Villa",
+    "email": "duranj@gmail.com",
+    "retirado": false
   }
 ]
