@@ -61,7 +61,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/futbolistas/1",
+					"raw": "http://localhost:3000/api/futbolistas/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -70,7 +70,7 @@
 					"path": [
 						"api",
 						"futbolistas",
-						"1"
+						"2"
 					]
 				}
 			},

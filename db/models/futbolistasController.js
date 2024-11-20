@@ -1,4 +1,4 @@
-const { readFile, writeFile } = require('../utils/fileOperation');
+const { readFile, writeFile } = require('../../utils/fileOperation');
 const Joi = require('joi');
 
 
